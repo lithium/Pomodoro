@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pomodoro</string>
+    <string name="alert_title">Pomodoro Alert!</string>
+
+    <string name="alarm_message_tomato">Your tomato is up! Take a break!</string>
+    <string name="alarm_message_rest">Break is over, get back to work!</string>
+
+    <string name="start_tomato">Start working</string>
+    <string name="start_rest"  >Start resting</string>
+    <string name="stop_working">Stop working</string>
+    <string name="reset_tomato">Reset tomato</string>
+
+    <string name="silence">Silence alarm</string>
+
+    <string name="status_none"></string>
+    <string name="status_tomato">Working</string>
+    <string name="status_rest">Break</string>
+
+
+
+    <string name="preferences">Preferences</string>
+    <string name="pref_pomodoro_cat">Pomodoro Preferences</string>
+
+    <string name="pref_tomato_cat">Tomato Alert Preferences</string>
+    <string name="pref_tomato_vibrate_title">Vibrate</string>
+    <string name="pref_tomato_vibrate_summary">Vibrate when a tomato is up</string>
+    <string name="pref_tomato_ringtone_title">Ringtone</string>
+    <string name="pref_tomato_ringtone_summary">Tone played when tomato finishes</string>
+    <string name="pref_tomato_duration_title">Tomato Duration</string>
+    <string name="pref_tomato_duration_summary">Minutes a tomato lasts</string>
+
+    <string name="pref_rest_cat">Rest Alert Preferences</string>
+    <string name="pref_rest_vibrate_title">Vibrate</string>
+    <string name="pref_rest_vibrate_summary">Vibrate when a rest is up</string>
+    <string name="pref_rest_ringtone_title">Ringtone</string>
+    <string name="pref_rest_ringtone_summary">Tone played when rest is over</string>
+    <string name="pref_rest_duration_title">Rest Duration</string>
+    <string name="pref_rest_duration_summary">Minutes a rest lasts</string>
+</resources>

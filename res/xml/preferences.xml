@@ -1,0 +1,47 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="@string/pref_pomodoro_cat">
+      <com.hlidskialf.android.preference.SliderPreference android:key="tomato_duration" 
+        android:title="@string/pref_tomato_duration_title"
+        android:summary="@string/pref_tomato_duration_summary"
+        android:defaultValue="25"
+        android:text=" minutes"
+        android:max="60"
+        />
+      <com.hlidskialf.android.preference.SliderPreference android:key="rest_duration" 
+        android:title="@string/pref_rest_duration_title"
+        android:summary="@string/pref_rest_duration_summary"
+        android:defaultValue="5"
+        android:text=" minutes"
+        android:max="60"
+        />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/pref_tomato_cat">
+      <RingtonePreference android:key="tomato_ringtone" 
+        android:title="@string/pref_tomato_ringtone_title"
+        android:summary="@string/pref_tomato_ringtone_summary"
+        android:ringtoneType="alarm"
+        android:showDefault="false"
+        android:showSilent="false" 
+        />
+      <CheckBoxPreference android:key="tomato_vibrate" 
+        android:title="@string/pref_tomato_vibrate_title"
+        android:summary="@string/pref_tomato_vibrate_summary"
+        android:defaultValue="false"
+        />
+  </PreferenceCategory>
+
+  <PreferenceCategory android:title="@string/pref_rest_cat">
+      <RingtonePreference android:key="rest_ringtone" 
+        android:title="@string/pref_rest_ringtone_title"
+        android:summary="@string/pref_rest_ringtone_summary"
+        android:ringtoneType="alarm"
+        android:showDefault="false"
+        android:showSilent="false" 
+        />
+      <CheckBoxPreference android:key="rest_vibrate" 
+        android:title="@string/pref_rest_vibrate_title"
+        android:summary="@string/pref_rest_vibrate_summary"
+        android:defaultValue="false"
+        />
+  </PreferenceCategory>
+</PreferenceScreen>

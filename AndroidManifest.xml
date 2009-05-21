@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.hlidskialf.android.pomodoro"
+      android:versionCode="1"
+      android:versionName="1.0">
+
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="android.permission.VIBRATE"/>
+  <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+      
+    <application android:label="@string/app_name" android:icon="@drawable/tomato">
+        <activity android:name=".PomodoroActivity"
+                  android:label="@string/app_name"
+                  >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".PomodoroReceiver">
+            <intent-filter>
+               <action android:name="com.hlidskialf.android.pomodoro.action.TOMATO_ALERT" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".PomodoroAlert" 
+                android:label="@string/alert_title"
+                android:excludeFromRecents="true"
+                android:theme="@android:style/Theme.Dialog"
+                android:launchMode="singleTask"
+        />
+
+        <activity android:name=".PomodoroPreferences" />
+    </application>
+</manifest> 
