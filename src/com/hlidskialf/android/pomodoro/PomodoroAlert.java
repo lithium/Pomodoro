@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.widget.TextView;
 import android.os.Bundle;
 import android.widget.Button;
+import android.view.KeyEvent;
 import android.view.View;
 
 import com.hlidskialf.android.widget.CountDownView;
@@ -12,6 +13,7 @@ import com.hlidskialf.android.widget.CountDownView;
 public class PomodoroAlert extends Activity
 {
   private CountDownView mTimerView;
+  private Klaxon mKlaxon;
 
   @Override
   public void onCreate(Bundle savedInstanceState)
@@ -46,11 +48,11 @@ public class PomodoroAlert extends Activity
       b2.setText(R.string.stop_working);
     }
 
-    final Klaxon klaxon = Klaxon.instance(PomodoroAlert.this);
+    mKlaxon = Klaxon.instance(PomodoroAlert.this);
 
     b1.setOnClickListener(new Button.OnClickListener() {
       public void onClick(View b) { //keep working
-        klaxon.stop();
+        mKlaxon.stop();
         if (alarm_type == Pomodoro.ALARM_TYPE_TOMATO) 
           Pomodoro.startRest(PomodoroAlert.this);
         else {
@@ -62,7 +64,7 @@ public class PomodoroAlert extends Activity
     });
     b2.setOnClickListener(new Button.OnClickListener() {
       public void onClick(View b) { //stop working
-        klaxon.stop();
+        mKlaxon.stop();
         Pomodoro.stopTomato(PomodoroAlert.this);
         Pomodoro.setTomatoCount(PomodoroAlert.this, -1);
         finish();
@@ -70,9 +72,19 @@ public class PomodoroAlert extends Activity
     });
     b3.setOnClickListener(new Button.OnClickListener() {
       public void onClick(View b) { //silence
-        klaxon.stop();
+        mKlaxon.stop();
         b.setEnabled(false);
       }
     });
   }
+  @Override public boolean onKeyDown(int code, KeyEvent event)
+  {
+    if (code == KeyEvent.KEYCODE_BACK) {
+      mKlaxon.stop();
+      Pomodoro.stopTomato(PomodoroAlert.this);
+      Pomodoro.setTomatoCount(PomodoroAlert.this, -1);
+    }
+    return super.onKeyDown(code, event);
+  }
+
 }

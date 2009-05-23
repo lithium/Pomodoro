@@ -51,13 +51,16 @@ public class SliderPreference extends DialogPreference implements SeekBar.OnSeek
     params = new LinearLayout.LayoutParams(
         LinearLayout.LayoutParams.FILL_PARENT, 
         LinearLayout.LayoutParams.WRAP_CONTENT);
+    params.setMargins(0,0,0,8);
     layout.addView(mValueText, params);
+    mValue = getPersistedInt(mDefault);
+    String t = String.valueOf(mValue);
+    mValueText.setText(mSuffix == null ? t : t.concat(mSuffix));
 
     mSeekBar = new SeekBar(mContext);
     mSeekBar.setOnSeekBarChangeListener(this);
     layout.addView(mSeekBar, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
-    mValue = getPersistedInt(mDefault);
 
     mSeekBar.setMax(mMax);
     mSeekBar.setProgress(mValue);

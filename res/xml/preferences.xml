@@ -14,7 +14,14 @@
         android:text=" minutes"
         android:max="60"
         />
+      <CheckBoxPreference android:key="notification_timer" 
+        android:title="@string/pref_notification_timer_title"
+        android:summary="@string/pref_notification_timer_summary"
+        android:defaultValue="true"
+        />
   </PreferenceCategory>
+
+  <PreferenceScreen android:title="@string/pref_tomato_cat">
   <PreferenceCategory android:title="@string/pref_tomato_cat">
       <RingtonePreference android:key="tomato_ringtone" 
         android:title="@string/pref_tomato_ringtone_title"
@@ -28,8 +35,24 @@
         android:summary="@string/pref_tomato_vibrate_summary"
         android:defaultValue="false"
         />
+      <com.hlidskialf.android.preference.SliderPreference android:key="tomato_volume" 
+        android:title="@string/pref_tomato_volume_title"
+        android:summary="@string/pref_tomato_volume_summary"
+        android:defaultValue="100"
+        android:text=" %"
+        android:max="100"
+        />
+      <com.hlidskialf.android.preference.SliderPreference android:key="tomato_delay" 
+        android:title="@string/pref_tomato_delay_title"
+        android:summary="@string/pref_tomato_delay_summary"
+        android:defaultValue="0"
+        android:text=" ms"
+        android:max="10000"
+        />
   </PreferenceCategory>
+  </PreferenceScreen>
 
+  <PreferenceScreen android:title="@string/pref_rest_cat">
   <PreferenceCategory android:title="@string/pref_rest_cat">
       <RingtonePreference android:key="rest_ringtone" 
         android:title="@string/pref_rest_ringtone_title"
@@ -43,5 +66,20 @@
         android:summary="@string/pref_rest_vibrate_summary"
         android:defaultValue="false"
         />
+      <com.hlidskialf.android.preference.SliderPreference android:key="rest_volume" 
+        android:title="@string/pref_rest_volume_title"
+        android:summary="@string/pref_rest_volume_summary"
+        android:defaultValue="100"
+        android:text=" %"
+        android:max="100"
+        />
+      <com.hlidskialf.android.preference.SliderPreference android:key="rest_delay" 
+        android:title="@string/pref_rest_delay_title"
+        android:summary="@string/pref_rest_delay_summary"
+        android:defaultValue="0"
+        android:text=" ms"
+        android:max="10000"
+        />
   </PreferenceCategory>
+  </PreferenceScreen>
 </PreferenceScreen>

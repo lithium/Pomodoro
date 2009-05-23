@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:padding="3dp"
+  >
+  <ImageView android:id="@+id/notify_icon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left|center_vertical"
+    android:layout_marginRight="10dp"
+    />
+  <TextView android:id="@+id/notify_text"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:layout_toRightOf="@id/notify_icon"
+    />
+    <!--
+  <com.hlidskialf.android.widget.CountDownView android:id="@+id/notify_countdown"
+    android:layout_height="fill_parent"
+    android:layout_width="wrap_content"
+    android:layout_toRightOf="@id/notify_text"
+    />-->
+</RelativeLayout>

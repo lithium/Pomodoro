@@ -33,7 +33,6 @@ public class PomodoroActivity extends Activity
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main);
 
-
     mTimerView = (CountDownView)findViewById(R.id.tomato_clock);
     mStatusText = (TextView)findViewById(R.id.tomato_status);
     mTomatoBar = (ViewGroup)findViewById(R.id.tomato_bar);
@@ -59,6 +58,9 @@ public class PomodoroActivity extends Activity
       public void onClick(View b) { 
         Pomodoro.stopTomato(PomodoroActivity.this);
         mTimerView.stop();
+
+        if (mCurAlarmType == Pomodoro.ALARM_TYPE_REST)
+          mTomatoCount = Pomodoro.setTomatoCount(PomodoroActivity.this, -1);
 
         mCurAlarmType = Pomodoro.ALARM_TYPE_NONE;
 
@@ -138,6 +140,7 @@ public class PomodoroActivity extends Activity
     if (mCurAlarmType == Pomodoro.ALARM_TYPE_REST) {
       mStatusText.setText(R.string.status_rest);
       mStartButton.setEnabled(false);
+      mStopButton.setVisibility(View.VISIBLE);
     }
     else {
       mStatusText.setText(R.string.status_none);
@@ -164,12 +167,12 @@ public class PomodoroActivity extends Activity
     }
     if (mCurAlarmType == Pomodoro.ALARM_TYPE_TOMATO) {
       ImageView iv = new ImageView(this);
-      iv.setImageResource(R.drawable.greenhalftomato);
+      iv.setImageResource(R.drawable.greentomato);
       mTomatoBar.addView(iv);
     }
     if (mCurAlarmType == Pomodoro.ALARM_TYPE_REST) {
       ImageView iv = new ImageView(this);
-      iv.setImageResource(R.drawable.greentomato);
+      iv.setImageResource(R.drawable.tomato);
       mTomatoBar.addView(iv);
     }
   }

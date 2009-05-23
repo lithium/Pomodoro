@@ -21,20 +21,30 @@
 
     <string name="preferences">Preferences</string>
     <string name="pref_pomodoro_cat">Pomodoro Preferences</string>
-
-    <string name="pref_tomato_cat">Tomato Alert Preferences</string>
-    <string name="pref_tomato_vibrate_title">Vibrate</string>
-    <string name="pref_tomato_vibrate_summary">Vibrate when a tomato is up</string>
-    <string name="pref_tomato_ringtone_title">Ringtone</string>
-    <string name="pref_tomato_ringtone_summary">Tone played when tomato finishes</string>
     <string name="pref_tomato_duration_title">Tomato Duration</string>
-    <string name="pref_tomato_duration_summary">Minutes a tomato lasts</string>
-
-    <string name="pref_rest_cat">Rest Alert Preferences</string>
-    <string name="pref_rest_vibrate_title">Vibrate</string>
-    <string name="pref_rest_vibrate_summary">Vibrate when a rest is up</string>
-    <string name="pref_rest_ringtone_title">Ringtone</string>
-    <string name="pref_rest_ringtone_summary">Tone played when rest is over</string>
+    <string name="pref_tomato_duration_summary">Minutes tomato lasts =</string>
     <string name="pref_rest_duration_title">Rest Duration</string>
-    <string name="pref_rest_duration_summary">Minutes a rest lasts</string>
+    <string name="pref_rest_duration_summary">Minutes rest lasts =</string>
+    <string name="pref_notification_timer_title">Notification Timer</string>
+    <string name="pref_notification_timer_summary">Show timer in notification bar</string>
+
+    <string name="pref_tomato_cat">Tomato Ringtone</string>
+    <string name="pref_tomato_ringtone_title">Ringtone</string>
+    <string name="pref_tomato_ringtone_summary">Tone when tomato done</string>
+    <string name="pref_tomato_vibrate_title">Vibrate</string>
+    <string name="pref_tomato_vibrate_summary">Vibrate when tomato done</string>
+    <string name="pref_tomato_volume_title">Volume</string>
+    <string name="pref_tomato_volume_summary">Volume of ringtone = </string>
+    <string name="pref_tomato_delay_title">Delay</string>
+    <string name="pref_tomato_delay_summary">Pause between ringtones = </string>
+
+    <string name="pref_rest_cat">Rest Ringtone</string>
+    <string name="pref_rest_ringtone_title">Ringtone</string>
+    <string name="pref_rest_ringtone_summary">Tone when rest is over</string>
+    <string name="pref_rest_vibrate_title">Vibrate</string>
+    <string name="pref_rest_vibrate_summary">Vibrate when rest is over</string>
+    <string name="pref_rest_volume_title">Volume</string>
+    <string name="pref_rest_volume_summary">Ringtone volume = </string>
+    <string name="pref_rest_delay_title">Delay</string>
+    <string name="pref_rest_delay_summary">Milliseconds between ringtones = </string>
 </resources>

@@ -20,18 +20,23 @@ public class PomodoroReceiver extends BroadcastReceiver {
     int timeout = 1;
     boolean vibrate = false;
     String tone;
+    int volume = 100;
+    int delay = 0;
+
     if (alarm_type == Pomodoro.ALARM_TYPE_TOMATO) {
       vibrate = prefs.getBoolean(Pomodoro.PREF_TOMATO_VIBRATE, Pomodoro.PREF_TOMATO_VIBRATE_DEFAULT);
       tone = prefs.getString(Pomodoro.PREF_TOMATO_RINGTONE, Pomodoro.PREF_TOMATO_RINGTONE_DEFAULT);
-      android.util.Log.v("receiver", tone == null ? "null": tone);
       if (tone != null) uri = Uri.parse(tone);
+      volume = prefs.getInt(Pomodoro.PREF_TOMATO_VOLUME, Pomodoro.PREF_TOMATO_VOLUME_DEFAULT);
+      delay = prefs.getInt(Pomodoro.PREF_TOMATO_DELAY, Pomodoro.PREF_TOMATO_DELAY_DEFAULT);
     }
     else
     if (alarm_type == Pomodoro.ALARM_TYPE_REST) {
       vibrate = prefs.getBoolean(Pomodoro.PREF_REST_VIBRATE, Pomodoro.PREF_REST_VIBRATE_DEFAULT);
       tone = prefs.getString(Pomodoro.PREF_REST_RINGTONE, Pomodoro.PREF_REST_RINGTONE_DEFAULT);
-      android.util.Log.v("receiver", tone == null ? "null": tone);
       if (tone != null) uri = Uri.parse(tone);
+      volume = prefs.getInt(Pomodoro.PREF_REST_VOLUME, Pomodoro.PREF_REST_VOLUME_DEFAULT);
+      delay = prefs.getInt(Pomodoro.PREF_REST_DELAY, Pomodoro.PREF_REST_DELAY_DEFAULT);
     }
 
     if (uri == null)
@@ -42,7 +47,7 @@ public class PomodoroReceiver extends BroadcastReceiver {
 
     //start alert
     Klaxon klaxon = Klaxon.instance(context);
-    klaxon.play(uri, vibrate, timeout * 60000);
+    klaxon.play(uri, vibrate, timeout * 60000, volume, delay);
 
     //launch ui
     Intent fireAlarm = new Intent(context, PomodoroAlert.class);
