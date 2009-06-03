@@ -17,7 +17,7 @@ public class Klaxon
 
   private Vibrator mVibrator;
   private MediaPlayer mMediaPlayer;
-  private static long[] sVibratePattern = new long[] { 500, 500 };
+  private static long[] sVibratePattern = new long[] { 500, 1000 };
 
   interface KillerCallback {
       public void onKilled();
@@ -71,7 +71,7 @@ public class Klaxon
 
     mMediaPlayer.setOnErrorListener(mErrorListener);
     mMediaPlayer.setAudioStreamType(AudioManager.STREAM_ALARM);
-    mMediaPlayer.setVolume(mVolume,mVolume);
+    mMediaPlayer.setVolume((float)mVolume/100F,(float)mVolume/100F);
 
     if (mDelay < 1) {
       mMediaPlayer.setLooping(true);

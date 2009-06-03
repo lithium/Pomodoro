@@ -1,9 +1,11 @@
 package com.hlidskialf.android.pomodoro;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.LinearLayout;
 
 import com.hlidskialf.android.widget.CountDownView;
 
@@ -19,7 +22,7 @@ public class PomodoroActivity extends Activity
   private CountDownView mTimerView;
   private TextView mStatusText;
   private ViewGroup mTomatoBar;
-  private Button mStartButton, mStopButton, mResetButton;
+  private Button mStartButton, mStopButton;
 
   private SharedPreferences mPrefs;
   
@@ -69,15 +72,6 @@ public class PomodoroActivity extends Activity
       }
     });
 
-    mResetButton = (Button)findViewById(R.id.tomato_reset);
-    mResetButton.setOnClickListener(new Button.OnClickListener() {
-      public void onClick(View b) { 
-        Pomodoro.stopTomato(PomodoroActivity.this);
-        mTomatoCount = Pomodoro.setTomatoCount(PomodoroActivity.this, 0);
-        update_tomato_bar();
-        update_status();
-      }
-    });
   }
   @Override
   public void onResume()
@@ -117,13 +111,33 @@ public class PomodoroActivity extends Activity
     return true;
   }
   @Override
+  public boolean onPrepareOptionsMenu(Menu menu)
+  {
+    MenuItem reset_item = menu.findItem(R.id.options_menu_reset);
+    reset_item.setVisible(Pomodoro.getTomatoCount(this) > 0);
+    return super.onPrepareOptionsMenu(menu);
+  }
+  @Override
   public boolean onOptionsItemSelected(MenuItem item)
   {
     switch (item.getItemId()) {
       case R.id.options_menu_preferences:
         startActivityForResult( new Intent(this, PomodoroPreferences.class), REQUEST_PREFERENCES );
         return true;
-      
+      case R.id.options_menu_about:
+        View layout = getLayoutInflater().inflate(R.layout.about, null);
+        AlertDialog dia = new AlertDialog.Builder(this)
+                                .setTitle(R.string.about_title)
+                                .setView(layout)
+                                .setPositiveButton(android.R.string.ok, null)
+                                .show();
+        return true;
+      case R.id.options_menu_reset:
+        Pomodoro.stopTomato(PomodoroActivity.this);
+        mTomatoCount = Pomodoro.setTomatoCount(PomodoroActivity.this, 0);
+        update_tomato_bar();
+        update_status();
+        return true;
     }    
     return super.onOptionsItemSelected(item);
   }
@@ -148,32 +162,38 @@ public class PomodoroActivity extends Activity
       mStopButton.setVisibility(View.GONE);
     }
 
-    if (Pomodoro.getTomatoCount(this) > 0) {
-      mResetButton.setVisibility(View.VISIBLE);
-    }
-    else {
-      mResetButton.setVisibility(View.GONE);
-    }
   }
 
   private void update_tomato_bar()
   {
     mTomatoBar.removeAllViews();
     int i;
+    int c=0;
+    LinearLayout holder = null;
     for (i=0; i < mTomatoCount; i++) {
+      if (c++ % 4 == 0) {
+        holder = new LinearLayout(this);
+        holder.setGravity(Gravity.CENTER);
+        mTomatoBar.addView(holder);
+      }
       ImageView iv = new ImageView(this);
       iv.setImageResource(R.drawable.tomato);
-      mTomatoBar.addView(iv);
+      holder.addView(iv);
+    }
+    if (c++ % 4 == 0) {
+      holder = new LinearLayout(this);
+      holder.setGravity(Gravity.CENTER);
+      mTomatoBar.addView(holder);
     }
     if (mCurAlarmType == Pomodoro.ALARM_TYPE_TOMATO) {
       ImageView iv = new ImageView(this);
       iv.setImageResource(R.drawable.greentomato);
-      mTomatoBar.addView(iv);
+      holder.addView(iv);
     }
     if (mCurAlarmType == Pomodoro.ALARM_TYPE_REST) {
       ImageView iv = new ImageView(this);
       iv.setImageResource(R.drawable.tomato);
-      mTomatoBar.addView(iv);
+      holder.addView(iv);
     }
   }
 }
