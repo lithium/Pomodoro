@@ -4,6 +4,8 @@
       android:versionCode="102000"
       android:versionName="1.2">
 
+  <uses-sdk android:minSdkVersion="2" />
+
   <uses-permission android:name="android.permission.WAKE_LOCK"/>
   <uses-permission android:name="android.permission.VIBRATE"/>
   <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
