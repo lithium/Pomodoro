@@ -43,7 +43,7 @@ public class CountDownView extends TextView
 
   public void stop()
   {
-    setText("0:0");
+    setText("00:00");
     mRunning = false;
   }
   public void pause()
@@ -61,6 +61,6 @@ public class CountDownView extends TextView
     long left = mUntil - System.currentTimeMillis();
     long min = Math.abs((long)(left / 60000));
     long sec = Math.abs((long)((left - min) / 1000) % 60);
-    setText((left < 0 ? "-" : "" )+ min+":"+sec);
+    setText(String.format("%02d:%02d", min, sec));
   }
 }
