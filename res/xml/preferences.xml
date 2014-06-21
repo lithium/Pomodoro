@@ -1,85 +1,91 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-  <PreferenceCategory android:title="@string/pref_pomodoro_cat">
-      <com.hlidskialf.android.preference.SliderPreference android:key="tomato_duration" 
-        android:title="@string/pref_tomato_duration_title"
-        android:summary="@string/pref_tomato_duration_summary"
-        android:defaultValue="25"
-        android:text=" minutes"
-        android:max="60"
-        />
-      <com.hlidskialf.android.preference.SliderPreference android:key="rest_duration" 
-        android:title="@string/pref_rest_duration_title"
-        android:summary="@string/pref_rest_duration_summary"
-        android:defaultValue="5"
-        android:text=" minutes"
-        android:max="60"
-        />
-      <CheckBoxPreference android:key="notification_timer" 
-        android:title="@string/pref_notification_timer_title"
-        android:summary="@string/pref_notification_timer_summary"
-        android:defaultValue="true"
-        />
-  </PreferenceCategory>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
-  <PreferenceScreen android:title="@string/pref_tomato_cat">
-  <PreferenceCategory android:title="@string/pref_tomato_cat">
-      <RingtonePreference android:key="tomato_ringtone" 
-        android:title="@string/pref_tomato_ringtone_title"
-        android:summary="@string/pref_tomato_ringtone_summary"
-        android:ringtoneType="alarm"
-        android:showDefault="false"
-        android:showSilent="false" 
-        />
-      <CheckBoxPreference android:key="tomato_vibrate" 
-        android:title="@string/pref_tomato_vibrate_title"
-        android:summary="@string/pref_tomato_vibrate_summary"
-        android:defaultValue="false"
-        />
-      <com.hlidskialf.android.preference.SliderPreference android:key="tomato_volume" 
-        android:title="@string/pref_tomato_volume_title"
-        android:summary="@string/pref_tomato_volume_summary"
-        android:defaultValue="100"
-        android:text=" %"
-        android:max="100"
-        />
-      <com.hlidskialf.android.preference.SliderPreference android:key="tomato_delay" 
-        android:title="@string/pref_tomato_delay_title"
-        android:summary="@string/pref_tomato_delay_summary"
-        android:defaultValue="0"
-        android:text=" ms"
-        android:max="10000"
-        />
-  </PreferenceCategory>
-  </PreferenceScreen>
+    <PreferenceCategory android:title="@string/pref_pomodoro_cat" >
+        <com.hlidskialf.android.preference.SliderPreference
+            android:defaultValue="25"
+            android:key="tomato_duration"
+            android:max="60"
+            android:summary="@string/pref_tomato_duration_summary"
+            android:text=" minutes"
+            android:title="@string/pref_tomato_duration_title" />
+        <com.hlidskialf.android.preference.SliderPreference
+            android:defaultValue="5"
+            android:key="rest_duration"
+            android:max="60"
+            android:summary="@string/pref_rest_duration_summary"
+            android:text=" minutes"
+            android:title="@string/pref_rest_duration_title" />
 
-  <PreferenceScreen android:title="@string/pref_rest_cat">
-  <PreferenceCategory android:title="@string/pref_rest_cat">
-      <RingtonePreference android:key="rest_ringtone" 
-        android:title="@string/pref_rest_ringtone_title"
-        android:summary="@string/pref_rest_ringtone_summary"
-        android:ringtoneType="alarm"
-        android:showDefault="false"
-        android:showSilent="false" 
-        />
-      <CheckBoxPreference android:key="rest_vibrate" 
-        android:title="@string/pref_rest_vibrate_title"
-        android:summary="@string/pref_rest_vibrate_summary"
-        android:defaultValue="false"
-        />
-      <com.hlidskialf.android.preference.SliderPreference android:key="rest_volume" 
-        android:title="@string/pref_rest_volume_title"
-        android:summary="@string/pref_rest_volume_summary"
-        android:defaultValue="100"
-        android:text=" %"
-        android:max="100"
-        />
-      <com.hlidskialf.android.preference.SliderPreference android:key="rest_delay" 
-        android:title="@string/pref_rest_delay_title"
-        android:summary="@string/pref_rest_delay_summary"
-        android:defaultValue="0"
-        android:text=" ms"
-        android:max="10000"
-        />
-  </PreferenceCategory>
-  </PreferenceScreen>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="notification_timer"
+            android:summary="@string/pref_notification_timer_summary"
+            android:title="@string/pref_notification_timer_title" />
+    </PreferenceCategory>
+
+    <PreferenceScreen android:title="@string/pref_tomato_cat" >
+        <PreferenceCategory android:title="@string/pref_tomato_cat" >
+            <RingtonePreference
+                android:key="tomato_ringtone"
+                android:ringtoneType="alarm"
+                android:showDefault="false"
+                android:showSilent="false"
+                android:summary="@string/pref_tomato_ringtone_summary"
+                android:title="@string/pref_tomato_ringtone_title" />
+
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="tomato_vibrate"
+                android:summary="@string/pref_tomato_vibrate_summary"
+                android:title="@string/pref_tomato_vibrate_title" />
+
+            <com.hlidskialf.android.preference.SliderPreference
+                android:defaultValue="100"
+                android:key="tomato_volume"
+                android:max="100"
+                android:summary="@string/pref_tomato_volume_summary"
+                android:text=" %"
+                android:title="@string/pref_tomato_volume_title" />
+            <com.hlidskialf.android.preference.SliderPreference
+                android:defaultValue="0"
+                android:key="tomato_delay"
+                android:max="10000"
+                android:summary="@string/pref_tomato_delay_summary"
+                android:text=" ms"
+                android:title="@string/pref_tomato_delay_title" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/pref_rest_cat" >
+        <PreferenceCategory android:title="@string/pref_rest_cat" >
+            <RingtonePreference
+                android:key="rest_ringtone"
+                android:ringtoneType="alarm"
+                android:showDefault="false"
+                android:showSilent="false"
+                android:summary="@string/pref_rest_ringtone_summary"
+                android:title="@string/pref_rest_ringtone_title" />
+
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="rest_vibrate"
+                android:summary="@string/pref_rest_vibrate_summary"
+                android:title="@string/pref_rest_vibrate_title" />
+
+            <com.hlidskialf.android.preference.SliderPreference
+                android:defaultValue="100"
+                android:key="rest_volume"
+                android:max="100"
+                android:summary="@string/pref_rest_volume_summary"
+                android:text=" %"
+                android:title="@string/pref_rest_volume_title" />
+            <com.hlidskialf.android.preference.SliderPreference
+                android:defaultValue="0"
+                android:key="rest_delay"
+                android:max="10000"
+                android:summary="@string/pref_rest_delay_summary"
+                android:text=" ms"
+                android:title="@string/pref_rest_delay_title" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+
 </PreferenceScreen>
