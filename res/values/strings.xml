@@ -60,4 +60,5 @@
     <string name="pref_rest_volume_summary">Ringtone volume = </string>
     <string name="pref_rest_delay_title">Delay</string>
     <string name="pref_rest_delay_summary">Milliseconds between ringtones = </string>
+    <string name="hey_">Hey!</string>
 </resources>
