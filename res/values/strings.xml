@@ -21,15 +21,13 @@
     <string name="start_tomato">Start working</string>
     <string name="start_rest"  >Start resting</string>
     <string name="stop_working">Stop working</string>
-    <string name="reset_tomato">Reset tomatos</string>
+    <string name="reset_tomato">Reset tomatoes</string>
 
     <string name="silence">Silence alarm</string>
 
     <string name="status_none"></string>
     <string name="status_tomato">Working</string>
     <string name="status_rest">Break</string>
-
-
 
 
     <string name="preferences">Preferences</string>
@@ -60,4 +58,5 @@
     <string name="pref_rest_volume_summary">Ringtone volume = </string>
     <string name="pref_rest_delay_title">Delay</string>
     <string name="pref_rest_delay_summary">Milliseconds between ringtones = </string>
+    <string name="hey_">Hey!</string>
 </resources>
