@@ -14,7 +14,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
-    android:textSize="10sp"
+    android:textSize="18sp"
     android:layout_marginBottom="10sp"
     android:text="@string/app_version"/>
   <ScrollView 

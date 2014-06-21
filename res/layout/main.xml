@@ -47,13 +47,13 @@
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:gravity="center"
-        android:textSize="40dp"
+        android:textSize="40sp"
         />
       <TextView android:id="@+id/tomato_status"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:gravity="center"
-        android:textSize="32dp"
+        android:textSize="32sp"
         />
     </LinearLayout>
 </RelativeLayout>

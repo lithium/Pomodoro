@@ -16,7 +16,7 @@
       android:layout_height="wrap_content"
       android:layout_width="fill_parent"
       android:gravity="center"
-      android:textSize="40dp"
+      android:textSize="40sp"
       android:layout_centerInParent="true"
       />
 
