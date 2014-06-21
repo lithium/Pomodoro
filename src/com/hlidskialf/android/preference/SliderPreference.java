@@ -1,14 +1,13 @@
 package com.hlidskialf.android.preference;
 
 import android.content.Context;
+import android.preference.DialogPreference;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.preference.DialogPreference;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.LinearLayout;
 
 
 public class SliderPreference extends DialogPreference implements SeekBar.OnSeekBarChangeListener

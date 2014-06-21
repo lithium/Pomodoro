@@ -1,11 +1,9 @@
 package com.hlidskialf.android.widget;
 
 import android.content.Context;
-import android.os.CountDownTimer;
 import android.os.Handler;
 import android.util.AttributeSet;
 import android.widget.TextView;
-import java.lang.Runnable;
 
 
 public class CountDownView extends TextView

@@ -1,6 +1,5 @@
 package com.hlidskialf.android.pomodoro;
 
-
 import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -10,7 +9,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.PowerManager;
-import android.widget.RemoteViews;
 
 public class Pomodoro 
 {
