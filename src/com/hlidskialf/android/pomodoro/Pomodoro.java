@@ -136,7 +136,12 @@ public class Pomodoro
     long left = when - System.currentTimeMillis();
     long min = Math.abs((long)(left / 60000));
     long sec = Math.abs((long)((left - min) / 1000) % 60);
-    return ((left < 0 ? "-" : "" )+ min+":"+sec);
+    if (sec < 10) {
+      return ((left < 0 ? "-" : "" )+ min+":0"+sec);
+    }
+    else {
+      return ((left < 0 ? "-" : "" )+ min+":"+sec);
+    }
   }
 
 
