@@ -18,9 +18,9 @@
     <string name="alarm_message_tomato">Tomate terminée ! Faites une pause !</string>
     <string name="alarm_message_rest">Pause terminée, retournez au travail !</string>
 
-    <string name="start_tomato">Commencer à travailler</string>
+    <string name="start_tomato">Commencer</string>
     <string name="start_rest" >Se reposer</string>
-    <string name="stop_working">Arrêter de travailler</string>
+    <string name="stop_working">Arrêter</string>
     <string name="reset_tomato">Remise à zéro</string>
 
     <string name="silence">Silencieux</string>
