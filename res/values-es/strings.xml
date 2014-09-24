@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pomodoro</string>
+    <string name="app_description">Temporizador de Productividad</string>
+    <string name="app_version">v1.2</string>
+    
+    <string name="about">Acerca de...</string>
+    <string name="about_title">Acerca de Pomodoro</string>
+    <string name="about_text"><b>Código fuente original de </b>\n<u>M. Wiggins</u>\n\n
+    <b>Código fuente disponible</b>\n<u>http://github.com/lithium/Pomodoro</u>\n\n
+    Publicado por Hlidskialf Software\n\n
+    No se proporciona garantía de ningún tipo.
+    </string>
+    
+    <string name="alert_title">¡Alerta de Pomodoro!</string>
+
+
+    <string name="alarm_message_tomato">¡Tu tomate está listo! ¡Tómate un descanso!</string>
+    <string name="alarm_message_rest">El descanso ha terminado, ¡vuelve al trabajo!</string>
+
+    <string name="start_tomato">Empezar a trabajar</string>
+    <string name="start_rest"  >Empezar a descansar</string>
+    <string name="stop_working">Dejar de trabajar</string>
+    <string name="reset_tomato">Reinicializar los tomates</string>
+
+    <string name="silence">Silenciar alarma</string>
+
+    <string name="status_none"></string>
+    <string name="status_tomato">Trabajando</string>
+    <string name="status_rest">Descanso</string>
+
+
+
+
+    <string name="preferences">Preferencias</string>
+    <string name="pref_pomodoro_cat">Preferencias de Pomodoro</string>
+    <string name="pref_tomato_duration_title">Duración del tomate</string>
+    <string name="pref_tomato_duration_summary">Minutos que dura el tomate =</string>
+    <string name="pref_rest_duration_title">Duración del descanso</string>
+    <string name="pref_rest_duration_summary">Minutos que dura el descanso =</string>
+    <string name="pref_notification_timer_title">Temporizador en notificaciones</string>
+    <string name="pref_notification_timer_summary">Mostrar el temporizador en la barra de notificaciones</string>
+
+    <string name="pref_tomato_cat">Tono de llamada del Tomate</string>
+    <string name="pref_tomato_ringtone_title">Tono de llamada</string>
+    <string name="pref_tomato_ringtone_summary">Tono a reproducir cuando el tomate está listo</string>
+    <string name="pref_tomato_vibrate_title">Vibración</string>
+    <string name="pref_tomato_vibrate_summary">Vibrar cuando el tomate está listo</string>
+    <string name="pref_tomato_volume_title">Volumen</string>
+    <string name="pref_tomato_volume_summary">Volumen del tono de llamada = </string>
+    <string name="pref_tomato_delay_title">Retraso</string>
+    <string name="pref_tomato_delay_summary">Tiempo entre tonos de llamada = </string>
+
+    <string name="pref_rest_cat">Tono de llamada del descanso</string>
+    <string name="pref_rest_ringtone_title">Tono de llamada</string>
+    <string name="pref_rest_ringtone_summary">Tono a reproducir cuando se termina el descanso</string>
+    <string name="pref_rest_vibrate_title">Vibración</string>
+    <string name="pref_rest_vibrate_summary">Vibrar cuando se termina el descanso</string>
+    <string name="pref_rest_volume_title">Volumen</string>
+    <string name="pref_rest_volume_summary">Volumen del tono de llamada = </string>
+    <string name="pref_rest_delay_title">Retraso</string>
+    <string name="pref_rest_delay_summary">Milisegundos entre tonos de llamada = </string>
+</resources>
