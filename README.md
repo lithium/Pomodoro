@@ -1,4 +1,5 @@
-Pomodoro - Productivity Timer
+# Pomodoro - Productivity Timer
+
 A tomato timer for using the Pomodoro technique.
 
 The pomodoro technique is a personal time management method:
