@@ -9,4 +9,5 @@ The pomodoro technique is a personal time management method:
  4. After 4 tomatos, take a longer break.
 
 Source code available
-Free downloads on website
+
+Free downloads available at http://android.hlidskialf.com/apps/pomodoro
