@@ -8,6 +8,6 @@ The pomodoro technique is a personal time management method:
  3. Walk away and break for 5 minutes.
  4. After 4 tomatos, take a longer break.
 
-Source code available
+Source code: https://github.com/lithium/pomodoro
 
 Free downloads available at http://android.hlidskialf.com/apps/pomodoro
